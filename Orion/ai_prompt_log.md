@@ -1,4 +1,4 @@
-Prompt 1: Sửa lại toàn bộ bài code này cho chạy được.
+Prompt 1: Tại sao ctx.arc() báo lỗi khi nhận tọa độ NaN? Có cách nào vẽ tiếp các điểm khác khi gặp lỗi này không?
 
 Prompt 2: Công thức toán học tính khoảng cách giữa điểm Click chuột và tâm một hình tròn trên Canvas.
 

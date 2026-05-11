@@ -1,0 +1,23 @@
+BÁO CÁO KỸ THUẬT: CƠ CHẾ CHỊU LỖI (ERROR HANDLING) - HỆ THỐNG RADAR ORION
+
+1. DỮ LIỆU THỬ NGHIỆM CỰC ĐOAN (Dữ liệu rác do AI giả lập):
+Dưới đây là mảng dữ liệu đã khiến hệ thống cũ bị sập hoàn toàn:
+
+[
+    { "id": "SAFE_01", "x": 100, "y": 100, "speed": 1 },
+    { "id": "ERROR_NULL", "x": null, "y": 200 },
+    { "id": "ERROR_STRING", "x": 300, "y": "không xác định" },
+    null,
+    { "id": "ERROR_NAN", "x": NaN, "y": 400 },
+    { "id": "ERROR_EMPTY", "speed": 2 }
+]
+
+2. PHÂN TÍCH KẾT QUẢ KIỂM THỬ:
+- Trước khi sửa: Trình duyệt báo lỗi "Uncaught TypeError: Failed to execute 'arc' on 'CanvasRenderingContext2D'". Toàn bộ màn hình Radar bị trắng tinh (WSOD).
+- Sau khi sửa: 
+    + Hệ thống Radar vẫn tiếp tục quét và hiển thị máy bay "SAFE_01" bình thường.
+    + Không xuất hiện lỗi Đỏ (Error) trong Console.
+    + Xuất hiện các cảnh báo Vàng (Warning) ghi rõ: "Radar Shield chặn dữ liệu rác: Dữ liệu hỏng tại tàu bay: ERROR_NULL".
+
+
+=> KẾT LUẬN: Module render đã đạt chuẩn "Bất tử" trước các sai số API.
