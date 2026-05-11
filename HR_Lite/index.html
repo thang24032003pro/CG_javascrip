@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR-Lite - Hệ thống Quản lý Nhân sự</title>
+    <style>
+        /* Khung giao diện cơ bản (Học viên không cần sửa phần này) */
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; padding: 20px; background-color: #f4f7f6; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .form-group { display: flex; gap: 10px; margin-bottom: 10px; }
+        input { padding: 8px; flex: 1; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        .employee-list { list-style-type: none; padding: 0; }
+        .employee-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #eee; }
+        .delete-btn { background-color: #dc3545; padding: 5px 10px; }
+        .delete-btn:hover { background-color: #c82333; }
+        .total-section { font-size: 1.2em; font-weight: bold; text-align: right; color: #333; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <h2>🚀 Hệ thống Quản trị HR-Lite</h2>
+
+    <div class="card">
+        <h3>➕ Thêm Nhân viên Mới</h3>
+        <form id="employeeForm">
+            <div class="form-group">
+                <input type="text" id="empName" placeholder="Họ và tên nhân viên..." required>
+                <input type="number" id="empSalary" placeholder="Lương (VNĐ)" required min="0">
+                <button type="submit">Thêm ngay</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>🔍 Bộ lọc tìm kiếm</h3>
+        <input type="text" id="searchInput" placeholder="Nhập tên nhân viên để lọc danh sách...">
+    </div>
+
+    <div class="card">
+        <h3>👥 Danh sách Nhân sự hiện tại</h3>
+        <ul id="employeeList" class="employee-list">
+            <li style="color: gray; font-style: italic;">Đang tải dữ liệu...</li>
+        </ul>
+
+        <div class="total-section">
+            Tổng quỹ lương: <span id="totalSalary">0</span> VNĐ
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
