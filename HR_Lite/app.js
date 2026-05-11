@@ -32,7 +32,7 @@ function calculateTotalSalary() {
 }
 
 employeeForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // CHẶN RELOAD TRANG
+    e.preventDefault(); 
     
     const name = document.querySelector('#empName').value;
     const salary = document.querySelector('#empSalary').value;
