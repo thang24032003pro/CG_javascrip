@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành hiển thị thông báo JS</title>
+</head>
+<body>
+
+    <h2>Bài tập 2: Sử dụng thẻ HTML</h2>
+    <div id="message-box">Nội dung cũ của thẻ div</div>
+
+    <hr>
+
+    <h2>Bài tập 3: Sử dụng document.write()</h2>
+    <p>Kết quả sẽ xuất hiện ngay bên dưới dòng này:</p>
+    
+    <script>
+        document.getElementById("message-box").innerHTML = "<b>Thành công!</b> Nội dung này được ghi bằng thẻ HTML qua innerHTML.";
+
+        document.write("<p style='color: blue;'>Chào bạn! Đây là nội dung từ hàm document.write().</p>");
+
+        console.log("Chúc mừng! Bạn đã thực hiện thành công Bài tập 4.");
+        console.log("Giá trị của một phép tính 5 + 5 là: ", 5 + 5);
+    </script>
+
+</body>
+</html>
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/thang24032003pro/CG_javascrip.git
+git push -u origin main
