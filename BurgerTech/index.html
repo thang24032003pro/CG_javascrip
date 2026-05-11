@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BurgerTech Kiosk - Hệ thống đặt món</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kiosk-container">
+        <h2>BurgerTech Self-Service Kiosk</h2>
+        
+        <div class="card">
+            <form id="orderForm">
+                <input type="text" id="foodName" placeholder="Tên món ăn (VD: Big Mac)" required>
+                <input type="number" id="foodPrice" placeholder="Giá tiền (VNĐ)" required>
+                <button type="submit">Thêm vào giỏ</button>
+            </form>
+        </div>
+
+        <div id="cartArea" class="card">
+            <h3>Giỏ hàng của bạn</h3>
+            <ul id="cartList">
+                </ul>
+            <div class="total-section">
+                Tổng tiền: <span id="totalPrice">0</span> VNĐ
+            </div>
+            <button id="checkoutBtn">Thanh toán (Enter)</button>
+            <p style="font-size: 0.8em; color: gray; margin-top: 10px;">Mẹo: Bấm Esc để xóa sạch giỏ hàng</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
