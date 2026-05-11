@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành nhúng JavaScript</title>
+</head>
+<body>
+
+    <h1>Thực hành nhúng JavaScript</h1>
+
+    <section>
+        <h2>Bài tập 1: Inline JavaScript</h2>
+        <button type="button" onclick="alert('Xin chào! Bạn vừa nhấn vào nút ở Bài tập 1.')">
+            Click me (Bài 1)
+        </button>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Bài tập 2: Internal JavaScript</h2>
+        <button type="button" onclick="showMessageInternal()">
+            Click me (Bài 2)
+        </button>
+
+        <script>
+            function showMessageInternal() {
+                alert('Xin chào! Đây là hàm được gọi từ thẻ <script> (Bài tập 2).');
+            }
+        </script>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Bài tập 3: External JavaScript</h2>
+        <button type="button" onclick="showMessageExternal()">
+            Click me (Bài 3)
+        </button>
+        
+        <script src="script.js"></script>
+    </section>
+
+</body>
+</html>
